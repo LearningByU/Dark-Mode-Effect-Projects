@@ -1,0 +1,53 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+:root{
+    --brightnessBg: 90%;
+    --brightnessThumb: 40%;
+}
+body{
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    background-color: hsl(250, 10%, var(--brightnessBg));
+    font-family: sans-serif;
+    font-family: "poppins", sans-serif;
+}
+.mode-button img{
+    width: 70px;
+    height: 70px;
+}
+.mode-button{
+    border: none;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+.mode-button:hover{
+    transform: scale(1.1);
+    transition: 0.2s;
+}
+#slider{
+    height: 88px;
+    margin-left: 10px;
+    width: 88px;
+    border-radius: 50%;
+    box-shadow: rgb(174, 187, 199) 3px 3px 6px 0px inset,
+    rgba(255, 255, 255,0.5) -3px -3px 6px 1px inset;
+    cursor: grab;
+    appearance: none;
+    padding-inline: 4px;
+}
+#slider::-webkit-slider-thumb{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: hsl(238, 40%, var(--brightnessThumb));
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px inset;
+    appearance: none;
+
+}
